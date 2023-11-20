@@ -42,7 +42,13 @@
     <main>
 	 <header><h3>A JavaScript Project by Jereck Orenia</h3></header>
 	 <h3 id="my-greeting">Greeting goes here</h3>
-	    <p>Explain what your page does and how it works here!</p>
+	    <p>
+			This page is a time reactive page that changes the background color, image, and custom message to the coresponding hour of the day. It is separated into 4 time ranges(morning, afternoon, evening, night) using if, else if and else funtioins. We retrive the time slots by using the getHours method to input the time ranges in a 24 hour clock format.
+		</p>
+			
+		<p>
+			An example of this JavaScript method; when the page is opened at 4 pm in the evening, the backround color is changes to a beige color, the image is shown is a green dressed doll, and the message shows "Good afternoon".
+		</p>
 	  <img src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible"id="my-pic">
      <footer>
       <p><small>&copy; 2022 by 
@@ -77,20 +83,25 @@
 	let myPic = "";
 
 	//TESTING ONLY REMOVE THE FOLLOWING LINE
-	//myHour = 3;
+	//myHour = 9;
 
-	if(myHour > 5 && myHour < 12){//morning
+	if(myHour > 5 && myHour < 12){//Morning
 		myGreeting = "Good Morning!";
 		myColor = "#FFE3C7";
 		myPic = "morning.jpg";
 
- 	}else if(myHour >= 12 && myHour < 18){
-		myGreeting = "Not Morning>!";
+ 	}else if(myHour >= 12 && myHour < 18){//Afternoon
+		myGreeting = "Good afternoon!";
 		myColor = "#D8B382";
 		myPic = "afternoon.jpg";
 
+	}else if(myHour >= 18 && myHour < 23){//Evening
+		myGreeting = "Good evening!";
+		myColor = "red";
+		myPic = "evening.jpg";
+
 	}else{//night
-		myGreeting = "Not Night>!";
+		myGreeting = "Good Night!";//Good night
 		myColor = "#216998";
 		myPic = "night.jpg";
 	}
