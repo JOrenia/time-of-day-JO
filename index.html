@@ -49,6 +49,10 @@
 		<p>
 			An example of this JavaScript method; when the page is opened at 4 pm in the afternoon, the backround color is changes to a beige color, the image is shown is a green dressed doll, and the message shows "Good afternoon".
 		</p>
+
+		<p>
+			I also included a switch method to dynamically change the day depending on the date!
+		</p>
 	  <img src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible"id="my-pic">
      <footer>
       <p><small>&copy; 2023 by 
@@ -85,7 +89,7 @@
 
 	//TESTING ONLY REMOVE THE FOLLOWING LINE
 	//myHour = 9;
-	//myDay = 3;
+	//myDay = 6;
 
 	if(myHour > 5 && myHour < 12){//Morning
 		myGreeting = "Good Morning!";
@@ -151,7 +155,7 @@ console.log(today);
 	myPic = "images/" + myPic;
 
 	//custom greeting
-	document.getElementById("my-greeting").innerHTML = myGreeting + " " + "Today is" + " " + today;
+	document.getElementById("my-greeting").innerHTML = myGreeting + " " + "Today is" + " " + today + "!";
 
 	//custom color
 	document.querySelector("html").style.backgroundColor = myColor;
