@@ -78,12 +78,14 @@
 
 	let myDate = new Date();
 	let myHour = myDate.getHours();
+	let myDay = myDate.getDay();
 	let myGreeting = "";
 	let myColor = "";
 	let myPic = "";
 
 	//TESTING ONLY REMOVE THE FOLLOWING LINE
 	//myHour = 9;
+	//myDay = 3;
 
 	if(myHour > 5 && myHour < 12){//Morning
 		myGreeting = "Good Morning!";
@@ -106,11 +108,50 @@
 		myPic = "night.jpg";
 	}
 
+	switch(myDay){
+
+
+	case 0:
+		today = "sunday";
+	break;
+
+
+	case 1:
+		today = "Monday";
+	break;
+
+	case 2:
+		today = "Tuesday";
+	break;
+
+	case 3:
+		today = "Wednesday";
+	break;
+
+	case 4:
+		today = "Thursday";
+	break;
+
+	case 5:
+		today = "Friday";
+	break;
+
+	case 6:
+		today = "Saturday";
+	break;
+
+	default:
+		today = "Somthing went wrong";
+	}
+
+
+console.log(today);
+
 	//prepend path to image
 	myPic = "images/" + myPic;
 
 	//custom greeting
-	document.getElementById("my-greeting").innerHTML = myGreeting;
+	document.getElementById("my-greeting").innerHTML = myGreeting + " " + "Today is" + " " + today;
 
 	//custom color
 	document.querySelector("html").style.backgroundColor = myColor;
